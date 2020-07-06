@@ -64,21 +64,23 @@ macro(build_mimick)
   # )
 
   externalproject_add(mimick-ext
-    GIT_REPOSITORY https://github.com/Snaipe/Mimick/
-    GIT_TAG master
+    GIT_REPOSITORY https://github.com/Blast545/Mimick
+    GIT_TAG exportTargets
     TIMEOUT 6000
     CMAKE_ARGS
-      -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
-      ${extra_cmake_args}
+    -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
+    ${extra_cmake_args}
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
   install(
     DIRECTORY
-      ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install/
+      ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
     DESTINATION
       ${CMAKE_INSTALL_PREFIX}
   )
+  # message(STATUS "Finishing install to ${CMAKE_INSTALL_PREFIX}")
+
 endmacro()
 
 build_mimick()
@@ -91,6 +93,9 @@ if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+# list(APPEND mimick_vendor_TARGETS mimick)
+# list(APPEND mimick_vendor_TARGETS mimick)
 
 # this ensures that the package has an environment hook setting the PATH
 ament_package()
