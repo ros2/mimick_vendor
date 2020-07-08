@@ -42,8 +42,8 @@ macro(build_mimick)
   
   include(ExternalProject)
   externalproject_add(mimick-ext
-    GIT_REPOSITORY https://github.com/Blast545/Mimick
-    GIT_TAG exportTargets
+    GIT_REPOSITORY https://github.com/hidmic/Mimick
+    GIT_TAG hidmic/cxx-compatibility
     TIMEOUT 6000
     CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
