@@ -8,7 +8,7 @@
   <description>
     Wrapper around mimick, it provides an ExternalProject build of mimick.
   </description>
-  <maintainer email="TODO@todo.com">TBD</maintainer>
+  <maintainer email="jjperez@ekumenlabs.com">Jorge J. Perez</maintainer>
   <license>Apache License 2.0</license>  <!-- the contents of this package are Apache 2.0 -->
   <license>MIT</license>  <!-- mimick is MIT -->
 
