@@ -7,6 +7,12 @@ find_package(ament_cmake REQUIRED)
 macro(build_mimick)
 
   set(extra_cmake_args)
+  if(WIN32)
+    if("${CMAKE_SYSTEM_PROCESSOR}" MATCHES "^(x86_|x86-|AMD|amd|x)64$")
+      list(APPEND extra_cmake_args -A x64)
+    endif()
+  endif()
+
   if(DEFINED CMAKE_BUILD_TYPE)
     list(APPEND extra_cmake_args -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE})
   endif()
@@ -39,15 +45,15 @@ macro(build_mimick)
   else()
     list(APPEND extra_cmake_args "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
   endif()
-  
+
   include(ExternalProject)
   externalproject_add(mimick-ext
     GIT_REPOSITORY https://github.com/hidmic/Mimick
     GIT_TAG hidmic/cxx-compatibility
     TIMEOUT 6000
     CMAKE_ARGS
-    -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
-    ${extra_cmake_args}
+      -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
+      ${extra_cmake_args}
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
