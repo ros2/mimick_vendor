@@ -20,7 +20,7 @@ macro(build_mimick)
   endif()
 
   if(DEFINED CMAKE_BUILD_TYPE)
-    if (WIN32)
+    if(WIN32)
       build_command(_build_command CONFIGURATION ${CMAKE_BUILD_TYPE})
       list(APPEND cmake_commands "BUILD_COMMAND ${_build_command}")
     else()
