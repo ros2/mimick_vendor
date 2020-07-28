@@ -59,8 +59,8 @@ macro(build_mimick)
 
   include(ExternalProject)
   externalproject_add(mimick-ext
-    GIT_REPOSITORY https://github.com/hidmic/Mimick
-    GIT_TAG hidmic/cxx-compatibility
+    GIT_REPOSITORY https://github.com/ros2/Mimick.git
+    GIT_TAG ros2
     TIMEOUT 6000
     ${cmake_commands}
     CMAKE_ARGS
