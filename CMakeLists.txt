@@ -59,7 +59,7 @@ macro(build_mimick)
 
   include(ExternalProject)
   externalproject_add(mimick-ext
-    GIT_REPOSITORY https://github.com/ros2/Mimick
+    GIT_REPOSITORY https://github.com/ros2/Mimick.git
     GIT_TAG ros2
     TIMEOUT 6000
     ${cmake_commands}
