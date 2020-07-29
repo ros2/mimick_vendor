@@ -2,8 +2,8 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.1 (2020-07-29)
+------------------
 * Change imported dep to match ROS 2 fork (`#4 <https://github.com/ros2/mimick_vendor/issues/4>`_)
 * Contributors: Jorge Perez
 
