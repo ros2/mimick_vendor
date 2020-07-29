@@ -2,6 +2,11 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Change imported dep to match ROS 2 fork (`#4 <https://github.com/ros2/mimick_vendor/issues/4>`_)
+* Contributors: Jorge Perez
+
 0.1.0 (2020-07-28)
 ------------------
 * Avoid CMAKE_BUILD_TYPE warnings on Windows. (`#3 <https://github.com/ros2/mimick_vendor/issues/3>`_)
