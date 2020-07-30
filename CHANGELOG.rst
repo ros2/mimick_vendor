@@ -2,8 +2,8 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2020-07-30)
+------------------
 * Pin Mimick version. (`#5 <https://github.com/ros2/mimick_vendor/issues/5>`_)
 * Contributors: Michel Hidalgo
 
