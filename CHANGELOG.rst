@@ -2,8 +2,8 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.1 (2020-08-05)
+------------------
 * Change tag to pull latest Mimick version (`#6 <https://github.com/ros2/mimick_vendor/issues/6>`_)
 * Contributors: Jorge Perez
 
