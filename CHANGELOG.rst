@@ -2,8 +2,8 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.2 (2020-09-18)
+------------------
 * Suppress cppcheck for MMK_MANGLE\_ (`#8 <https://github.com/ros2/mimick_vendor/issues/8>`_)
 * Change Mimick tagged version. (`#7 <https://github.com/ros2/mimick_vendor/issues/7>`_)
 * Contributors: Michel Hidalgo, brawner
