@@ -8,7 +8,7 @@ macro(build_mimick)
 
   set(cmake_commands)
   set(cmake_configure_args -Wno-dev)
-  set(cmake_configure_args -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install)
+  list(APPEND cmake_configure_args -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install)
 
   if(WIN32)
     if(DEFINED CMAKE_GENERATOR)
