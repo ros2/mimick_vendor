@@ -1,0 +1,36 @@
+set(SKIP_MIMICK @SKIP_MIMICK@)
+
+# 
+# Conditionally adds mimick as a target link library if mimick tests are enabled.
+# If mimick is disabled, it will add a compile definition to the target that can be used to
+# selectively skip mimick based tests.
+# If you want to completely ignore a test file, you can instead use the `SKIP_MIMICK`
+# variable directly.
+#
+# :param COMPILE_DEFINITION: Name of the compile definition that will be define when mimick tests
+#   are being skipped. Defaults to `SKIP_MIMICK`.
+# :type COMPILE_DEFINITION: string
+# :param SKIP_MIMICK: Will also skip mimick tests when this flag is true.
+#   Useful for platform dependent problems (e.g. inject_on_return does not work in some platforms).
+# :type SKIP_MIMICK: boolean
+# @public
+function(target_depend_mimick library_target)
+  cmake_parse_arguments(ARG "" "COMPILE_DEFINITION;SKIP_MIMICK" "" ${ARGN})
+  if(ARG_UNPARSED_ARGUMENTS)
+    message(FATAL_ERROR "target_depend_mimick() called with unused arguments: ${ARG_UNPARSED_ARGUMENTS}")
+  endif()
+  set(_SKIP_MIMICK ${SKIP_MIMICK})
+  if(ARG_SKIP_MIMICK)
+    set(_SKIP_MIMICK ON)
+  endif()
+  if(NOT _SKIP_MIMICK)
+    message(DEBUG "target '${library_target}': Running mimick based tests")
+    target_link_libraries(${library_target} mimick)
+  else()
+    if(NOT ARG_COMPILE_DEFINITION)
+      set(ARG_COMPILE_DEFINITION "SKIP_MIMICK")
+    endif()
+    message(DEBUG "target '${library_target}': Skipping mimick based tests, compile definition ${ARG_COMPILE_DEFINITION}")
+    target_compile_definitions(${library_target} PRIVATE ${ARG_COMPILE_DEFINITION})
+  endif()
+endfunction()

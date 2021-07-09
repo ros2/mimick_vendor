@@ -82,11 +82,16 @@ macro(build_mimick)
 
 endmacro()
 
-build_mimick()
+option(SKIP_MIMICK
+  "When ON, mimick is not going to be build and mimick based tests are not going to be run"
+  OFF)
+if (NOT SKIP_MIMICK)
+  build_mimick()
 
-ament_export_include_directories(include)
-ament_export_libraries(mimick)
-ament_export_dependencies(mimick)
+  ament_export_include_directories(include)
+  ament_export_libraries(mimick)
+  ament_export_dependencies(mimick)
+endif()
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -94,4 +99,6 @@ if(BUILD_TESTING)
 endif()
 
 # this ensures that the package has an environment hook setting the PATH
-ament_package()
+ament_package(
+  CONFIG_EXTRAS "mimick_vendor-extras.cmake.in"
+)
