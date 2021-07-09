@@ -91,14 +91,19 @@ if (NOT SKIP_MIMICK)
   ament_export_include_directories(include)
   ament_export_libraries(mimick)
   ament_export_dependencies(mimick)
+else()
+  add_library(mimick INTERFACE)
+  target_compile_definitions(mimick INTERFACE "SKIP_MIMICK")
 endif()
+
+install(TARGETS mimick EXPORT mimick)
+ament_export_targets(mimick)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-# this ensures that the package has an environment hook setting the PATH
-ament_package(
+ament_package()
   CONFIG_EXTRAS "mimick_vendor-extras.cmake.in"
 )
