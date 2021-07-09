@@ -85,7 +85,7 @@ endmacro()
 option(SKIP_MIMICK
   "When ON, mimick is not going to be build and mimick based tests are not going to be run"
   OFF)
-if (NOT SKIP_MIMICK)
+if(NOT SKIP_MIMICK)
   build_mimick()
 
   ament_export_include_directories(include)
