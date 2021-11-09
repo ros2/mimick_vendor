@@ -14,6 +14,7 @@
 
   <url type="website">https://github.com/Snaipe/Mimick</url>
   <author email="jjperez@ekumenlabs.com">Jorge J. Perez</author>
+  <author email="michel@ekumenlabs.com">Michel Hidalgo</author>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>git</buildtool_depend>
