@@ -2,6 +2,11 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* support pi zero (`#24 <https://github.com/ros2/mimick_vendor/issues/24>`_)
+* Contributors: Brett Downing
+
 0.2.7 (2022-01-14)
 ------------------
 * Update maintainers to Geoffrey Biggs (`#23 <https://github.com/ros2/mimick_vendor/issues/23>`_)
