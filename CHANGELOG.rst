@@ -2,6 +2,11 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Mirror rolling to master
+* Contributors: Audrow Nash
+
 0.3.0 (2022-04-29)
 ------------------
 
