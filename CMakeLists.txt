@@ -69,6 +69,9 @@ macro(build_mimick)
     ${cmake_commands}
     CMAKE_ARGS
       ${cmake_configure_args}
+    PATCH_COMMAND
+      sed -i "s/add_subdirectory \(test\)/ /g" CMakeLists.txt &&
+      sed -i "s/add_subdirectory \(sample\)/ /g" CMakeLists.txt
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
