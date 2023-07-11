@@ -2,8 +2,8 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.1 (2023-07-11)
+------------------
 * Switch to ament_cmake_vendor_package (`#31 <https://github.com/ros2/mimick_vendor/issues/31>`_)
 * Contributors: Scott K Logan
 
