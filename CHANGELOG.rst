@@ -2,8 +2,8 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.1 (2024-03-28)
+------------------
 * Bump vendored mimick version for `ros2/Mimick#32 <https://github.com/ros2/Mimick/issues/32>`_ (`#35 <https://github.com/ros2/mimick_vendor/issues/35>`_)
 * Update to the commit that fixes mmk_noreturn. (`#34 <https://github.com/ros2/mimick_vendor/issues/34>`_)
 * Contributors: Chris Lalancette, Michael Carroll
