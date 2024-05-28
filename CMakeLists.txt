@@ -6,7 +6,7 @@ find_package(ament_cmake_vendor_package REQUIRED)
 
 ament_vendor(mimick_vendor
   VCS_URL https://github.com/ros2/Mimick.git
-  VCS_VERSION 1b4c5cf47766f82e4460b4e2827c4219a6ca1f9b
+  VCS_VERSION 4dbd495e9f3d87a83c3201ef9d851e85f7133db7
 )
 
 ament_export_dependencies(mimick)
