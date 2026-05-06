@@ -2,6 +2,9 @@
 Changelog for package mimick_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.0 (2025-04-24)
 ------------------
 * Remove CODEOWNERS and mirror-rolling-to-master workflow. (`#40 <https://github.com/ros2/mimick_vendor/issues/40>`_)
