@@ -11,7 +11,7 @@
 
   <maintainer email="scott@openrobotics.org">Scott K Logan</maintainer>
 
-  <license>Apache License 2.0</license>  <!-- the contents of this package are Apache 2.0 -->
+  <license>Apache-2.0</license>  <!-- the contents of this package are Apache 2.0 -->
   <license>MIT</license>  <!-- mimick is MIT -->
 
   <url type="website">https://github.com/Snaipe/Mimick</url>
